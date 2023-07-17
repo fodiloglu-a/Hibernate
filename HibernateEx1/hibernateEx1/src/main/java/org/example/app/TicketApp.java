@@ -32,6 +32,8 @@ public class TicketApp {
             session.merge(ticketModel);
             session.merge(armchairModel);
             transaction.commit();
+            ArmchairModel armchairModel1=session.find(ArmchairModel.class,1);
+            System.out.println(armchairModel1.getTicketModel().getTicketCode());
         }catch (Exception e){
             throw new RuntimeException();
         }
