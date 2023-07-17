@@ -6,11 +6,16 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
+import java.util.Date;
+
 public class Main {
     public static void main(String[] args) {
         UserModel userModel=new UserModel();
+        Date date=new Date();
         userModel.setUserName("Test User");
-
+        userModel.setDate(date);
+        userModel.setTime(date);
+        userModel.setDateTime(date);
         SessionFactory sessionFactory=new Configuration()
                 .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(UserModel.class)
