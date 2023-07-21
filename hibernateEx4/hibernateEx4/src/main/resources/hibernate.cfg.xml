@@ -20,11 +20,14 @@
         <property name="hibernate.current_session_context_class">thread</property>
 
         <!-- Mapping files -->
+<!--        <mapping class="org.example.entity.Vehicle"></mapping>-->
+<!--        <mapping class="org.example.entity.Category"></mapping>-->
         <!-- Add your entity mappings here -->
-      
+
+
 
         <!-- Enable Hibernate's automatic creation of tables -->
         <property name="tr"></property>
-        <property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
     </session-factory>
 </hibernate-configuration>
